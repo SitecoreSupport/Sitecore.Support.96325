@@ -43,7 +43,7 @@ namespace Sitecore.Support.ContentSearch
       {
         var cloneIndexable = PrepareIndexableVersion(clone, context);
 
-        if (!this.IsExcludedFromIndex(clone))
+        if (!this.IsExcludedFromIndex(clone, true))
         {
           this.Operations.Update(cloneIndexable, context, context.Index.Configuration);
         }
